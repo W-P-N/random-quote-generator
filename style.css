@@ -1,0 +1,71 @@
+body {
+    background-color: #696FC7;
+    color: #F5EFE6;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main #input-div label {
+    font-size: larger;
+    padding: 8px 0;
+    font-weight: 900;
+}
+
+main #input-div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 16px;
+    padding: 8px;
+    min-width: 50%;
+}
+
+main #input-div #topic {
+    background-color: white;
+    text-decoration: none;
+    min-height: 2.5rem;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 8px;
+}
+
+main #input-div #get-quote-button {
+    background-color: #F1F3E0;
+    text-decoration: none;
+    min-height: 2.5rem;
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+main #input-div #get-quote-button:hover {
+    background-color: #E3E3E3;
+}
+
+#output {
+    display: flex;
+    justify-content: center;
+    min-width: 50%;
+    padding: 16px;
+    margin: 16px;
+    flex-direction: column;
+    border: 2px solid white;
+    background-color: #A7AAE1;
+    color: white;
+    font-size: larger;
+    border-radius: 4px;
+}
+
+#output p {
+    align-self: flex-end;
+}
+

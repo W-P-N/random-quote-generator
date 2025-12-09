@@ -5,7 +5,7 @@
     const output = document.getElementById('output');
 
     // Event Listener
-    getQuoteButton.addEventListener('click', getRandomQuote)
+    getQuoteButton.addEventListener('click', getRandomQuote);
 
     // Functions
     async function getRandomQuote() {
