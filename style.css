@@ -1,7 +1,15 @@
+:root {
+    --primary-color: #F5EFE6;
+    --background-color: #696FC7;
+    --quote-background-color: #A7AAE1;
+    --hover-button-color: #E3E3E3;
+    --button-color: #F1F3E0;
+}
+
 body {
-    background-color: #696FC7;
-    color: #F5EFE6;
-    font-family: 'Times New Roman', Times, serif;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
 
 main {
@@ -11,61 +19,60 @@ main {
     align-items: center;
 }
 
-main #input-div label {
+main form label {
     font-size: larger;
-    padding: 8px 0;
+    padding: 0.5rem 0;
     font-weight: 900;
 }
 
-main #input-div {
+main form {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin: 16px;
-    padding: 8px;
+    gap: 0.5rem;
+    margin: 1rem;
+    padding: 0.5rem;
     min-width: 50%;
 }
 
-main #input-div #topic {
+main form #topic {
     background-color: white;
     text-decoration: none;
     min-height: 2.5rem;
     text-align: center;
     font-size: large;
     font-weight: 500;
-    font-family: 'Times New Roman', Times, serif;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
-main #input-div #get-quote-button {
-    background-color: #F1F3E0;
+main form #get-quote-button {
+    background-color: var(--button-color);
     text-decoration: none;
     min-height: 2.5rem;
     text-align: center;
     font-size: large;
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 }
 
-main #input-div #get-quote-button:hover {
-    background-color: #E3E3E3;
+main form #get-quote-button:hover {
+    background-color: var(--hover-button-color);
 }
 
-#output {
+output {
     display: flex;
     justify-content: center;
     min-width: 50%;
-    padding: 16px;
-    margin: 16px;
+    padding: 1rem;
+    margin: 1rem;
     flex-direction: column;
     border: 2px solid white;
-    background-color: #A7AAE1;
+    background-color: var(--quote-background-color);
     color: white;
     font-size: larger;
-    border-radius: 4px;
+    border-radius: 0.25rem;
 }
 
-#output p {
+output figcaption {
     align-self: flex-end;
 }
 
