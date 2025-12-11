@@ -2,7 +2,7 @@
     // DOM References
     const topic = document.getElementById('topic');
     const getQuoteButton = document.getElementById('get-quote-button');
-    const output = document.getElementsByTagName('output')[0];
+    const output = document.getElementById('output');
 
     // Event Listener
     getQuoteButton.addEventListener('click', getRandomQuote);
@@ -14,7 +14,11 @@
         const topicSelected = topic.value;
         try {
             const quote = await searchQuote(topicSelected);
-            displayResult(quote);
+            if(quote === null) {
+                displayError(`No quotes found for this topic - ${topicSelected}`);
+            } else {
+                displayResult(quote);
+            }
         } catch (error) {
             displayError('Unable to get Quote');
         }
@@ -25,6 +29,9 @@
         const data = await fetchData();
         const t = topic.toLowerCase();
         const listOfQuotes = data.filter(quote => quote['topic'].some(qt => qt.toLowerCase() === t));
+        if(listOfQuotes.length === 0) {
+            return null;
+        }
         const randomQuotePick = listOfQuotes[Math.floor(Math.random() * listOfQuotes.length)];
         return randomQuotePick;
         

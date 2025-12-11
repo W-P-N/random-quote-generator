@@ -46,7 +46,6 @@ main form #topic {
 
 main form #get-quote-button {
     background-color: var(--button-color);
-    text-decoration: none;
     min-height: 2.5rem;
     text-align: center;
     font-size: large;
